@@ -1,0 +1,6 @@
+framework module Pods_RecipePuppyChallengeTests {
+  umbrella header "Pods-RecipePuppyChallengeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
