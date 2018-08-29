@@ -16,7 +16,6 @@
 		5CA519B6212CA251007576CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA519B4212CA251007576CC /* LaunchScreen.storyboard */; };
 		5CA519C1212CA251007576CC /* RecipePuppyChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA519C0212CA251007576CC /* RecipePuppyChallengeTests.swift */; };
 		5CA519CC212CA251007576CC /* RecipePuppyChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA519CB212CA251007576CC /* RecipePuppyChallengeUITests.swift */; };
-		5CA519DA212CA409007576CC /* RecipePuppyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA519D9212CA409007576CC /* RecipePuppyViewModel.swift */; };
 		5CA519DC212CA4C0007576CC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA519DB212CA4C0007576CC /* Recipe.swift */; };
 		5CA519DE212CA4F0007576CC /* RecipeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA519DD212CA4F0007576CC /* RecipeAPI.swift */; };
 		6AC5E0E5040A28A1F4CC3314 /* Pods_RecipePuppyChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8472CF6C1A00D24F45DFC348 /* Pods_RecipePuppyChallengeTests.framework */; };
@@ -56,7 +55,6 @@
 		5CA519C7212CA251007576CC /* RecipePuppyChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipePuppyChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA519CB212CA251007576CC /* RecipePuppyChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyChallengeUITests.swift; sourceTree = "<group>"; };
 		5CA519CD212CA251007576CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CA519D9212CA409007576CC /* RecipePuppyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyViewModel.swift; sourceTree = "<group>"; };
 		5CA519DB212CA4C0007576CC /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		5CA519DD212CA4F0007576CC /* RecipeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAPI.swift; sourceTree = "<group>"; };
 		8472CF6C1A00D24F45DFC348 /* Pods_RecipePuppyChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipePuppyChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,7 +117,6 @@
 			children = (
 				5CA519DB212CA4C0007576CC /* Recipe.swift */,
 				5CA519DD212CA4F0007576CC /* RecipeAPI.swift */,
-				5CA519D9212CA409007576CC /* RecipePuppyViewModel.swift */,
 				5CA519AA212CA24D007576CC /* ViewController.swift */,
 				5CA519AC212CA24D007576CC /* Main.storyboard */,
 				5CA519B7212CA251007576CC /* Info.plist */,
@@ -378,7 +375,6 @@
 				5CA519AB212CA24D007576CC /* ViewController.swift in Sources */,
 				5CA519DE212CA4F0007576CC /* RecipeAPI.swift in Sources */,
 				5CA519A9212CA24D007576CC /* AppDelegate.swift in Sources */,
-				5CA519DA212CA409007576CC /* RecipePuppyViewModel.swift in Sources */,
 				5CA519DC212CA4C0007576CC /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

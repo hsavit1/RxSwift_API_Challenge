@@ -20,20 +20,20 @@ class RecipePuppyViewModel {
     var failiureCounter = 0
     
     init() {
-        searchText.asObservable()
-            .subscribe({_ in
-                
-                //classic, iterative approach
-//                self.getRecipes()
-                
-                // RxSwift approach
-                self.get()
-            })
-            .disposed(by: disposeBag)
+//        searchText.asObservable()
+//            .subscribe({_ in
+//
+//                //classic, iterative approach
+////                self.getRecipes()
+//
+//                // RxSwift approach
+////                self.get()
+//            })
+//            .disposed(by: disposeBag)
     }
     
-    private func get() {
-        RecipeAPI.getRecipes(with: "\(searchText.value ?? "" )")
+    public func get(text: String?) -> Observable<AnyObject> {
+        return RecipeAPI.getRecipes(with: "\(text ?? "" )")
             // Set 3 attempts to get response
             .retry(3)
             
@@ -51,40 +51,35 @@ class RecipePuppyViewModel {
 //                        retryCount -> Observable.timer((long) Math.pow(4, retryCount), TimeUnit.SECONDS)
 //                )
 //            )
-            // Set 2 seconds timeout
-            .timeout(2, scheduler: MainScheduler.instance)
-            // Subscribe in background thread
-//            .subscribeOn(backgroundWorkScheduler)
             // Observe in main thread
             .observeOn(MainScheduler.instance)
             // Subscribe on observer
-            .subscribe(
-                onNext: { data in
-                    self.recipes.value = []
-                    let object = JSON(data)
-                    for rs in object["results"] {
-                        let recipe = Recipe(json: rs.1)
-                        self.recipes.value.append(recipe)
-                    }
-            },
-                onError: { error in
-                    
-                    //retry on timeout
-                    print(error)
-                    
-                    // show error in top cell
-                    self.recipes.value = []
-                    let recipe = Recipe.init(title: "ERROR GETTING RESULTS")
-                    self.recipes.value.append(recipe)
-            },
-                onCompleted: {
-                    print("Completed")
-            },
-                onDisposed: {
-                    print("Disposed")
-            }
-            )
-            .disposed(by: disposeBag)
+//            .subscribe(
+//                onNext: { data in
+//                    self.recipes.value = []
+//                    let object = JSON(data)
+//                    for rs in object["results"] {
+//                        let recipe = Recipe(json: rs.1)
+//                        self.recipes.value.append(recipe)
+//                    }
+//            },
+//                onError: { error in
+//
+//                    //retry on timeout
+//                    print(error)
+//
+//                    // show error in top cell
+//                    self.recipes.value = []
+//                    let recipe = Recipe.init(title: "ERROR GETTING RESULTS")
+//                    self.recipes.value.append(recipe)
+//            },
+//                onCompleted: {
+//                    print("Completed")
+//            },
+//                onDisposed: {
+//                    print("Disposed")
+//            }
+//            )
     }
     
     private func getRecipes() {
